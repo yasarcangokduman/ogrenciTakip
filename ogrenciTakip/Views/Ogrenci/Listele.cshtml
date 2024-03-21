@@ -1,0 +1,28 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+@model List<OgrenciModel>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th scope="col">Okul No</th>
+            <th scope="col">Adı </th>
+            <th scope="col">Soyadı</th>
+            <th scope="col">Sınıfı</th>
+        </tr>
+    </thead>
+    <tbody class="table-group-divider">
+        @foreach (var Talebe in Model)
+        {
+            <tr>
+                <th scope="row">@Talebe.ono</th>
+                <td>@Talebe.isim</td>
+                <td>@Talebe.soyIsim</td>
+                <td>@Talebe.sinif</td>
+            </tr>
+        }
+    </tbody>
+</table>
